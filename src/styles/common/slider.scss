@@ -1,0 +1,185 @@
+.slider-wrp {
+   position: relative;
+   width: 940px;
+   margin: 0 auto;
+   overflow: hidden;
+    @include desktop {
+    margin: 0;
+  }
+   @include laptop {
+     margin: 0 auto;
+     width: 700px;
+  }
+   @include tablets {
+     margin: 0 auto;
+     width: 500px;
+  }
+   @include tablets574 {
+     margin: 0 auto;
+     width: 450px;
+  }
+  @include phones {
+    margin: 0 auto;
+     width: 360px;
+  }
+   @include phones390 {
+    margin: 0 auto;
+     width: 300px;
+  }
+}
+.slider-list {
+    white-space: nowrap;
+    font-size: 0;
+}
+.slider-items {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    top: 0%;
+    left: 0%;
+}
+.slider-box--img {
+    position: relative;
+    width: 100%;
+}
+.slider-img {
+    max-width: 100%;
+}
+.slider-promo {
+    position: absolute;
+    width: 250px;
+    height: 60px;
+    background-color: #404040;
+    left: 0;
+    bottom: 5%;
+     @include tablets {
+    display: none;
+  }
+}
+.slider-promo--text-small {
+    font-size: 16px;
+    color: rgb(154,154,154);
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-weight: 300;
+    margin-top: 13px;
+    line-height: 0.8;
+}
+.slider-promo--text-big {
+    font-size: 20px;
+    color: rgb(246, 241, 241);
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-weight: 700;
+}
+.slider-info {
+    background-color: #f6f6f6;
+    margin-top: -5px;
+    width: 100%;
+}
+.slider-info--title {
+    font-size: 20px;
+    color: rgb(71,71,71);
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+.slider-info--text {
+    font-size: 16px;
+    color: rgb(71,71,71);
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+.slider-btn-controls {
+    position: absolute;
+    right: 5%;
+    top: 80%;
+    width: auto;
+    height: auto;
+     @include desktop {
+   top: 80%;
+  }
+   @include laptop {
+   top: 75%;
+  }
+   @include tablets {
+    top: 70%;
+  }
+    @include tablets574 {
+    top: 70%;
+  }
+   @include phones {
+    top: 67%;
+  }
+   @include phones390 {
+    top: 65%;
+  }
+}
+.btn-list {
+    display: flex;
+    justify-content: flex-start;
+}
+.btn-items {
+    margin-right: 10px;
+
+    &:last-child {
+         margin-right: 0px;
+    }
+}
+
+.btn-line {
+    width: 30px;
+    height: 5px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+         background-color: #444444;
+    }
+}
+.btn-line-active {
+    .btn-line {
+    background-color: #b90c0c;
+    }
+   
+}
+.slider-btn {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-decoration: none;
+    position: absolute;
+    z-index: 3;
+    border-radius: 50%;
+    background-color: rgba(94, 90, 90, 0.5);
+    top: 50%;
+    transform: translateY(-50%);
+}
+.prev {
+    left: 3%;
+    &:after {
+        content: "<";
+        color: rgba(214, 210, 210, 0.4);
+        font-size: 30px;
+        font-weight: 700;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+}
+.next {
+    right: 3%;
+    &:after {
+        content: ">";
+        color: rgba(214, 210, 210, 0.4);
+        font-size: 30px;
+        font-weight: 700;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+
+    }
+}

@@ -1,0 +1,177 @@
+.block-right {
+    width: 24%;
+    transition: all 1s;
+    position: relative;
+    @include laptop {
+        position: fixed;
+        right: -300px;
+        
+    }
+    @include tablets {
+        position: fixed;
+        right: -300px;
+       
+    }
+    @include phones {
+        position: fixed;
+        right: -300px;
+        
+    }
+}
+.aside-item {
+    margin-bottom: 60px;
+    &:first-child {
+        margin-top: 106px;
+
+    }
+    &:last-child {
+        margin-top: 0px;
+
+    }
+}
+.aside-title {
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: rgb(71, 71, 71);
+    line-height: 0.2;
+    text-transform: uppercase;
+    @include laptop {
+        text-align: center;
+    }
+    @include tablets {
+        text-align: center;
+
+    }
+    @include phones {
+        text-align: center; 
+
+    }
+}
+.aside-shrt-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: rgb(71, 71, 71);
+    font-size: 14px;
+    margin-top: 20px;
+    @include laptop {
+        text-align: center;
+    }
+    @include tablets {
+        text-align: center;
+
+    }
+    @include phones {
+        text-align: center; 
+
+    }
+}
+.aside-shrt-text--link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: rgb(71, 71, 71);
+    font-size: 14px;
+    text-decoration: none;
+}
+.style-twett {
+    font-weight: 500; 
+}
+.aside-link--twitter {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration: none;
+    color: rgb(158, 158, 158);
+}
+.aside-link--twitter-span {
+     color: rgb(71, 71, 71);
+}
+.aside-shrt-text--add-twett {
+    margin-top: 5px;
+    color: rgb(158, 158, 158);
+}
+.blog-right--icon {
+    background: #d86c6c;;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    width: 25px;
+    height: 50px;
+    display: none;
+    box-shadow: -3px 0px 10px -5px rgba(0,0,0,0.75);
+    cursor: pointer;
+    @include laptop {
+        display: block;
+        position: fixed;
+        top: 23%;
+        right: 0%; 
+    }
+    @include tablets {
+        display: block;
+        position: fixed;
+        top: 23%;
+        right: 0%; 
+
+    }
+    @include phones {
+        display: block;
+        position: fixed;
+        top: 23%;
+        right: 0%; 
+
+    }
+}
+.active-block-right {
+    
+     @include laptop {
+        position: fixed;
+        right: 0;
+        z-index: 100;
+        width: 280px;
+        background-color: #fbfbfb;
+        box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75); 
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+    }
+    @include tablets {
+        position: fixed;
+        right: 0;
+        z-index: 100;
+        width: 280px;
+        background-color: #fbfbfb;
+        box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+    @include phones {
+        position: fixed;
+        right: 0px;
+        z-index: 100;
+        width: 280px;
+        background-color: #fbfbfb;
+        box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+}
+.active-icon {
+    @include laptop {
+        position: absolute; 
+        top: 15%;
+        right: 100%; 
+    }
+    @include tablets {
+        position: absolute; 
+        top: 15%;
+        right: 100%;
+
+    }
+    @include phones {
+        position: absolute; 
+        top: 15%;
+        right: 100%;
+    }
+     
+}

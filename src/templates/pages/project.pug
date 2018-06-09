@@ -1,0 +1,164 @@
+extends ../template
+
+block variables
+    - var title = 'Projects'
+
+block content
+    include ../common/header.pug
+    section.section-project
+        section.section-content
+            .container.style-block
+                .block-left
+                    .section--title
+                        h2.h2-title Contacts
+                        .description-title Etiam eget mi enim, non ultricies nisi voluptatem, illo inventore veritatis et quasi architecto beatae 
+                                            |vitae dicta sunt explicabo nemo enim ipsam voluptatem.
+                    img.line-img(src="assets/images/footer-line.png" alt="линия")
+                    
+                    .tabs
+                        .tab-mobile--btn Search projects >>  
+                        ul.tab-menu--list
+                            
+                            -
+                                var tabs = ['all', 'web', 'print', 'art', 'photoshop', 'development']
+                            
+                            -   for(var i = 0; i < tabs.length; i++) {
+                                    if tabs[i] == 'all'
+                                        li.tab-menu--item.active-tab= tabs[i]
+                                            
+                                    else 
+                                        li.tab-menu--item= tabs[i]
+                            - }
+                    .content-tab
+                        -
+                            var article = ['all', 'web', 'print', 'art', 'photoshop', 'development']
+
+                        -   for(var i = 0; i < article.length; i++) {
+                                if article[i] == 'all'
+                                    article.article-animate(id="tab-"+i)
+                                        .row
+                                            -
+                                                var contents = [
+                                                    ['assets/images/work-1.jpg', 'vallarta  brochure', 'print', 'assets/images/big1.jpg'],
+                                                    ['assets/images/work-2.jpg', 'wedding  card', 'print', 'assets/images/big2.jpg'],
+                                                    ['assets/images/work-3.jpg', 'website  design', 'web', 'assets/images/big3.jpg'],
+                                                    ['assets/images/work-4.jpg', 'jesus  wallpaper', 'art', 'assets/images/big4.jpg'],
+                                                    ['assets/images/work-5.jpg', 'Smoke  Tutorialr', 'photoshop', 'assets/images/big5.jpg'],
+                                                    ['assets/images/work-6.jpg', 'business  cards', 'development', 'assets/images/big6.jpg'],
+                                                ] 
+                                            each content in contents
+                                                .col-md-4.col-sm-6.style-margin-bottom
+                                                    .content-pic
+                                                        img.content-img(src=`${content[0]}`)
+                                                        .overlay(data-image=`${content[3]}`)
+                                                            .overlay-icon
+                                                                img.overlay-icon--img(src="assets/images/lupa.png")
+                                                    .mission-title= content[1]
+                                                    .content-name--tab= content[2]
+                                                    .mission-description Seded ut perspiciatis unde omnis iste 
+                                                                        |natus error sit voluptatem accusantium antium. 
+                                else if article[i] == 'web'
+                                    article.article-animate(id="tab-"+i)
+                                        .row 
+                                            -
+                                                var contents = [
+                                                    ['assets/images/work-3.jpg', 'website  design', 'web', 'assets/images/big3.jpg']
+                                                ] 
+                                            each content in contents
+                                                .col-md-4.col-sm-6
+                                                    .content-pic
+                                                        img.content-img(src=`${content[0]}`)
+                                                        .overlay
+                                                            .overlay-icon
+                                                                img.overlay-icon--img(src="assets/images/lupa.png")
+                                                    .mission-title= content[1]
+                                                    .content-name--tab= content[2]
+                                                    .mission-description Seded ut perspiciatis unde omnis iste 
+                                                                        |natus error sit voluptatem accusantium antium.
+                                else if article[i] == 'print'
+                                    article.article-animate(id="tab-"+i)
+                                        .row 
+                                            -
+                                                var contents = [
+                                                   ['assets/images/work-1.jpg', 'vallarta  brochure', 'print', 'assets/images/big1.jpg'],
+                                                   ['assets/images/work-2.jpg', 'wedding  card', 'print', 'assets/images/big2.jpg'],
+                                                ] 
+                                            each content in contents
+                                                .col-md-4.col-sm-6
+                                                    .content-pic
+                                                        img.content-img(src=`${content[0]}`)
+                                                        .overlay
+                                                            .overlay-icon
+                                                                img.overlay-icon--img(src="assets/images/lupa.png")
+                                                    .mission-title= content[1]
+                                                    .content-name--tab= content[2]
+                                                    .mission-description Seded ut perspiciatis unde omnis iste 
+                                                                        |natus error sit voluptatem accusantium antium.
+                                else if article[i] == 'art'
+                                    article.article-animate(id="tab-"+i)
+                                        .row.style-content-margin-top 
+                                            -
+                                                var contents = [
+                                                    ['assets/images/work-4.jpg', 'jesus  wallpaper', 'art', 'assets/images/big4.jpg']
+                                                ] 
+                                            each content in contents
+                                                .col-md-4.col-sm-6
+                                                    .content-pic
+                                                        img.content-img(src=`${content[0]}`)
+                                                        .overlay
+                                                            .overlay-icon
+                                                                img.overlay-icon--img(src="assets/images/lupa.png")
+                                                    .mission-title= content[1]
+                                                    .content-name--tab= content[2]
+                                                    .mission-description Seded ut perspiciatis unde omnis iste 
+                                                                        |natus error sit voluptatem accusantium antium.
+                                else if article[i] == 'photoshop'
+                                    article.article-animate(id="tab-"+i)
+                                        .row 
+                                            -
+                                                var contents = [
+                                                   ['assets/images/work-5.jpg', 'Smoke  Tutorialr', 'photoshop', 'assets/images/big5.jpg']
+                                                ] 
+                                            each content in contents
+                                                .col-md-4.col-sm-6
+                                                    .content-pic
+                                                        img.content-img(src=`${content[0]}`)
+                                                        .overlay
+                                                            .overlay-icon
+                                                                img.overlay-icon--img(src="assets/images/lupa.png")
+                                                    .mission-title= content[1]
+                                                    .content-name--tab= content[2]
+                                                    .mission-description Seded ut perspiciatis unde omnis iste 
+                                                                        |natus error sit voluptatem accusantium antium.
+                                else if article[i] == 'development'
+                                    article.article-animate(id="tab-"+i)
+                                        .row 
+                                            -
+                                                var contents = [
+                                                   ['assets/images/work-6.jpg', 'business  cards', 'development', 'assets/images/big6.jpg']
+                                                ] 
+                                            each content in contents
+                                                .col-md-4.col-sm-6
+                                                    .content-pic
+                                                        img.content-img(src=`${content[0]}`)
+                                                        .overlay
+                                                            .overlay-icon
+                                                                img.overlay-icon--img(src="assets/images/lupa.png")
+                                                    .mission-title= content[1]
+                                                    .content-name--tab= content[2]
+                                                    .mission-description Seded ut perspiciatis unde omnis iste 
+                                                                        |natus error sit voluptatem accusantium antium. 
+
+                        - }
+                .block-right
+                    include ../common/block-right.pug
+        include ../common/footer.pug
+    .zoom-overlay
+        .zoom-overlay-conteiner
+            .close
+                .close-line1
+                .close-line2
+            img(class="zoom-overlay-img")
+        .preloader
+            .loader
+   

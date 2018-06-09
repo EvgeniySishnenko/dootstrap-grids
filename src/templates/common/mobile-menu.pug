@@ -1,0 +1,12 @@
+ul.top-nav--list-mobile
+    -
+        var navs = [
+            ['home', 'index.html', 'Homepage'],
+            ['about', 'about.html', 'Who  are  we?'],
+            ['projects', 'project.html', 'MY  Portfolio'],
+            ['blog', 'blog.html', 'Latest  News'],
+            ['contacts', 'contact.html', 'Get  in  touch'],
+        ]
+    each nav in navs
+        li.top-nav-mobile--item
+            a.top-nav-mobile--link(href=`${nav[1]}`)= nav[0]

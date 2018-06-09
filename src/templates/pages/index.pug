@@ -1,0 +1,53 @@
+extends ../template
+
+block variables
+    - var title = 'Home'
+
+block content
+    include ../common/header.pug
+    section.section-slider
+       include ../common/slider.pug 
+    section.section-work
+        .container
+            .row  
+                -
+                    var works = [
+                        ['assets/images/magnify.png', 'Check Out OUR  latest PROJECTS'],
+                        ['assets/images/icon.png', 'Guarantee  5  STar Quality Work'],
+                        ['assets/images/icon2.png', 'Stay connected  by reading  the  blog'],
+                    ]   
+                each work in works
+                    .col
+                        .works-box
+                            .works-pic
+                                img.img-pic(src=`${work[0]}`)
+                                .works-title= work[1]
+                            .works-text Maecenas ipsum metus, semper hendrerit varius mattis, congue sit amet tellus. Aliquam ullamcorper dui sed magna posue re ut elementum enim rutrum. 
+                                    |Nam mi erat, porta id ultrices nec, pellentesque vel nunc. Cras varius fermentum iaculis. Aenean sodales nibh non lectus tempor a interdum justo ultricies.
+                            a.works-link(href="#") &raquo;  FIND  OUT  MORE
+            .row
+                .box-line-text
+                    img.line-img(src="assets/images/line.png")
+                    .line-text My  latest  wor               
+            .row.last-work--style  
+                -
+                    var works = [
+                        ['assets/images/work1.png', 'Vallarta  BrochureS'],
+                        ['assets/images/work2.png', 'Photoshop  tutorial'],
+                        ['assets/images/work3.png', 'Business  cards'],
+                        ['assets/images/work4.png', 'Website  design'],
+                    ]   
+                each work in works
+                    .col
+                        .works-box
+                            .works-pic.works-pic--style
+                                img.img-pic.img-pic--style(src=`${work[0]}`)
+                                .works-title.works-title--style= work[1]
+                            .works-text.works-text--style Maecenas ipsum metus, semper hendrerit varius mattis, congue sit amet tellus.
+                                        | Aliquam ullamcorper dui sed magna posue re ut elementum enim rutrum. 
+                            a.works-link(href="#") &raquo;  View  project
+    include ../common/footer.pug
+
+       
+
+                            

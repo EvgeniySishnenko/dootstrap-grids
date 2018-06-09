@@ -1,0 +1,29 @@
+header.header
+    .container
+        .row.header-topStyle-margin-top
+            .col-3
+                .logo
+                    a.logo-link(href="index.html")
+                        img.heder-logo(src="assets/images/blitz.png" alt="логотип")
+            .col-9
+                nav.top-nav
+                    .block-menu__gamb
+                        .gamb-btn
+                            .gamb-line1
+                            .gamb-line2
+                            .gamb-line3
+                    ul.top-nav--list
+                        -
+                            var navs = [
+                                ['home', 'index.html', 'Homepage'],
+                                ['about', 'about.html', 'Who  are  we?'],
+                                ['projects', 'project.html', 'MY  Portfolio'],
+                                ['blog', 'blog.html', 'Latest  News'],
+                                ['contacts', 'contact.html', 'Get  in  touch'],
+                            ]
+                        each nav in navs
+                            li.top-nav--item
+                                span.top-nav--shrt-text= nav[2]
+                                a.top-nav--link(href=`${nav[1]}`)= nav[0]
+
+                    include ../common/mobile-menu.pug      

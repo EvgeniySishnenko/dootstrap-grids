@@ -1,0 +1,108 @@
+.section-about {
+    position: relative;
+    // width: 100%;
+    // height: 100%;
+    margin-top: 20px;
+}
+.section--title {
+    width: 100%;
+}
+.h2-title { 
+  font-size: 25px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: rgb(71, 71, 71);
+  text-transform: uppercase;
+    @include phones {
+   text-align: center;
+  }
+}
+
+.description-title {
+  font-size: 13px;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(158, 158, 158);
+  font-weight: 100;
+  font-style: italic;
+  width: 50%;
+  
+   @include laptop {
+    width: 80%;
+  }
+   @include tablets {
+    width: 80%;
+  }
+   @include phones {
+    width: 100%;
+    text-align: center;
+  }
+}
+.line-img {
+    display: inline-block;
+    width: 100%;
+    height: 10px;
+}
+.style-margin-top {
+    margin-top: 25px;
+}
+.style-width {
+    width: 100%;
+}
+.mission-title {
+  font-size: 22px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: rgb(71, 71, 71);
+}
+ .mission-description {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: rgb(71, 71, 71);
+  margin-top: 10px;
+ }
+.command-syle-margin-top {
+    margin-top: 50px;  
+ }
+ .command-pic {
+     width: 100%;
+     text-align: center;
+ }
+ .user-img {
+    display: inline-block;
+    width: 100%;
+ }
+ .command--name-number {
+     display: flex;
+     justify-content: space-between;
+ }
+ .command--name {
+    font-size: 21px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: rgb(71, 71, 71);
+    text-transform: uppercase;
+ }
+ .command--number {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: rgb(71, 71, 71);
+
+    
+ }
+ .command-profession {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: rgb(148, 147, 147);
+    text-transform: uppercase;
+ }
+.command-col--style {
+    margin-bottom: 70px;
+      @include tablets {
+       margin-top: 30px;
+       &:first-child {
+            margin-top: 0px;
+       }
+      }
+}

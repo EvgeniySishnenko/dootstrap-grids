@@ -1,0 +1,52 @@
+extends ../template
+
+block variables
+    - var title = "Blog"
+
+block content
+    include ../common/header.pug
+    .container
+        section.section-blog
+            .block-left
+                .section--title
+                    h2.h2-title blog
+                    .description-title Etiam eget mi enim, non ultricies nisi voluptatem, illo inventore veritatis et quasi architecto beatae 
+                                        |vitae dicta sunt explicabo nemo enim ipsam voluptatem.
+                img.line-img(src="assets/images/footer-line.png" alt="линия")
+                main.blog-main
+                    -
+                        var blogs = [
+                            ['assets/images/blog-1.jpg', 'top  10  web  design  blogs'],
+                            ['assets/images/blog-2.jpg', 'Amazing  free  PORtfolio  psd  theme'],
+                            ['assets/images/blog-3.jpg', 'Best  wallpapers  of  2012']
+                        ]  
+
+                    each blog in blogs
+                        article.blog-article
+                            h3.blog-title=blog[1]
+                            .blog-article--wrp-img
+                                img.blog-article--img(src=`${blog[0]}`)
+                            .row.row--margin-top
+                                .col-sm-3
+                                    .wrap-info
+                                        .blog-title.style--font-size date
+                                            .text-small  April 15, 2012
+                                        .blog-title.style--font-size Tags
+                                            .text-small  Website  |  Design
+                                        .blog-title.style--font-size Comments
+                                            .text-small  4		
+                                .col-sm-9
+                                    .blog-description Etiam eget mi enim, non ultricies nisi 
+                                                        |voluptatem, illo inventore veritatis et quasi architecto 
+                                                        |beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem.
+                                    .blog-description Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+                                            |totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                                            | Donec ut volutpat metus. Aliquam tortor lorem, fringilla tempor dignissim at, pretium et arcu.
+                            img.line-img.blog-stile--line(src="assets/images/footer-line.png" alt="линия")                        
+
+                    
+
+
+            .block-right
+                include ../common/block-right.pug
+    include ../common/footer.pug

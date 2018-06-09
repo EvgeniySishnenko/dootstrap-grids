@@ -1,0 +1,31 @@
+.container
+    .slider-wrp
+        ul.slider-list
+            -
+                var sliders = [
+                    ['assets/images/img.png', 'FEATURED WORK', 'This Months', 'JESUS TYPOGRAPHY WALLPAPER'],
+                    ['assets/images/img.png', 'FEATURED WORK', 'This Months', 'JESUS TYPOGRAPHY WALLPAPER'],
+                    ['assets/images/img.png', 'FEATURED WORK', 'This Months', 'JESUS TYPOGRAPHY WALLPAPER'],
+                    ['assets/images/img.png', 'FEATURED WORK', 'This Months', 'JESUS TYPOGRAPHY WALLPAPER']
+                ]
+            each slider in sliders
+                li.slider-items
+                    .slider-container
+                        .slider-box--img
+                            img.slider-img(src=`${slider[0]}`)
+                            .slider-promo
+                                .slider-promo--text-small= slider[2]
+                                .slider-promo--text-big= slider[1]
+                        .slider-info
+                            .slider-info--title= slider[3]
+                            .slider-info--text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non diam et lacus pulvinar venenatis et vestibulum velit. Pellentesque interdum faucibus dui hendrerit ultrices. Aliquam erat volutpat. Duis commodo turpis id diam pulvinar hendrerit.
+        .slider-btn-controls
+            ul.btn-list
+               
+        .slider-controls
+            a(href="#" class="prev slider-btn") 
+               
+            a(href="#" class="next slider-btn") 
+                 
+
+                                

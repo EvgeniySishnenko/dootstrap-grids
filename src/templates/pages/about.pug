@@ -1,0 +1,70 @@
+extends ../template
+
+block variables
+    - var title = 'About'
+
+block content
+    include ../common/header.pug
+    section.section-about
+        .container
+            .row 
+                .col
+                    .section--title
+                        h2.h2-title About Us
+                        .description-title Etiam eget mi enim, non ultricies nisi voluptatem, illo inventore veritatis et quasi architecto beatae 
+                                           |vitae dicta sunt explicabo nemo enim ipsam voluptatem.
+                    img.line-img(src="assets/images/footer-line.png" alt="линия")
+            .row  
+                .col-md-4.col-12
+                    .about-mission--box
+                        h3.mission-title OUR  PHILOSOPHY
+                        .description-title.style-width Etiam eget mi enim, non ultricies nisi 
+                                           |voluptatem, illo inventore veritatis et quasi architecto 
+                                           |beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem.
+                        .mission-description Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+                                            |totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                                            | Donec ut volutpat metus. Aliquam tortor lorem, fringilla tempor dignissim at, pretium et arcu.
+                                            | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
+                                            |doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+                .col-md-4.col-12
+                    .about-mission--box
+                        h3.mission-title OUR  PHILOSOPHY
+                        .description-title.style-width Etiam eget mi enim, non ultricies nisi 
+                                           |voluptatem, illo inventore veritatis et quasi architecto 
+                                           |beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem.
+                        .mission-description Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+                                            |totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                                            | Donec ut volutpat metus. Aliquam tortor lorem, fringilla tempor dignissim at, pretium et arcu.
+                                            | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
+                                            |doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+                .col-md-4.col-12
+                    .about-mission--box
+                        h3.mission-title OUR  PHILOSOPHY
+                        .description-title.style-width Etiam eget mi enim, non ultricies nisi 
+                                           |voluptatem, illo inventore veritatis et quasi architecto 
+                                           |beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem.
+                        .mission-description Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+                                            |totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                                            | Donec ut volutpat metus. Aliquam tortor lorem, fringilla tempor dignissim at, pretium et arcu.
+                                            | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
+                                            |doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+                img.line-img.style-margin-top(src="assets/images/footer-line.png" alt="линия")    
+            .row.command-syle-margin-top
+                -
+                    var commands = [
+                        ['Jondoe', 'ceo', '134354678', 'assets/images/1.jpg'],
+                        ['Jondoe', 'manager', '134354678', 'assets/images/1.jpg'],
+                        ['Jondoe', 'merchandiser', '134354678', 'assets/images/1.jpg'],
+                    ]
+                each command in commands
+                    .col-md-4.col-12.command-col--style
+                        .command-pic
+                            img.user-img(src=`${command[3]}`, alt="фото сотрудника")
+                        .command--name-number
+                            .command--name= command[0]
+                            .command--number= command[2]
+                        .command-profession= command[1]
+                        .mission-description Seded ut perspiciatis unde omnis iste natus error sit 
+                                            |voluptatem accusantium doloremque laud antium, totam rem aperiam.
+    include ../common/footer.pug
+

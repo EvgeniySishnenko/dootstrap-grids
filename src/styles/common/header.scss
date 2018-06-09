@@ -1,0 +1,125 @@
+.header {
+    width: 100%;
+    height: 80px;
+    border-top: 6px solid #ebebeb;
+}
+.header-topStyle-margin-top {
+    margin-top: 11px;
+}
+.logo-link {
+    text-decoration: none;
+}
+.top-nav {
+    position: relative;
+}
+.top-nav,
+.top-nav--list  {
+    width: 100%;
+    height: 100%;
+}
+.top-nav--list {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    @include phones518 {
+    display: none;
+  
+  } 
+}
+.top-nav--item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+    &:last-child {
+       margin-right: 0px;  
+    }
+
+    @include laptop {
+    margin-right: 35px;
+  }
+     @include tablets {
+     margin-right: 15px;
+  }
+
+}
+.top-nav--shrt-text {
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    color: rgb(71,71,71);
+    width: auto;
+    font-weight: 300;
+    @include laptop {
+     display: none;
+  }
+}
+.top-nav--link {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 22px;
+    line-height: 18px;
+    color: rgb(71,71,71);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin-top: 5px;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute; 
+        border: 10px solid transparent; 
+        border-top: 10px solid #ebebeb;
+        left: 50%;
+        transform: translate(-50%, -38px) scale(0);
+        z-index: 50;
+    }
+    
+    &:hover {
+         &::after {
+             transform: translate(-50%, -38px) scale(1); 
+             @include laptop {
+          transform: translate(-50%, -28px) scale(1); 
+  }
+         }
+   }
+
+    @include tablets {
+      font-size: 16px;
+  }
+    
+}
+.block-menu__gamb {
+     display: none; 
+      @include phones518 {
+    display: flex;
+    justify-content: flex-end; 
+    margin-top: 5px;
+  }  
+}
+.gamb-btn {
+    cursor: pointer;
+}
+.gamb-line1,
+.gamb-line2,
+.gamb-line3 {
+    background: rgb(53, 51, 51);
+    width: 30px;
+    height: 5px;
+    margin-top: 4px;
+    transition: 0.8s;     
+}
+.active_gamb_btn {
+     & .gamb-line1 {
+        transform: rotate(-45deg) translateY(8px) translateX(-1px);
+        transition: 0.8s;
+    }
+    & .gamb-line2 {
+        transform: rotateY(-90deg);
+        transition: 0.8s;
+    }
+    & .gamb-line3{
+        transform: rotate(45deg) translateY(-12px) translateX(-5px);
+        transition: 0.8s;
+}
+}
